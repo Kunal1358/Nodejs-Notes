@@ -5,8 +5,8 @@
     let skip = (page - 1) * limit;
     let sortBy = req.query.sort || "createdAt";
     let sort = {}
-    sort.sortBy = sortBy
     const sortType = req.query.sortType && req.query.sortType === 'asc' ? 1 : req.query.sortType && req.query.sortType === 'desc' ? -1 : -1;
+    sort[sortBy] = sortBy
 
  </br>
 
